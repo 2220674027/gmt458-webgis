@@ -1,5 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+/* style.css dosyanıza ekleyin */
 
+/* Temel sayfa ayarları */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/* Hareketli Arka Plan Konteyneri */
+#particles-js {
+    position: fixed; /* Ekranda sabit kalmasını sağlar */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1; /* En arka katmana atar */
+    background-color: #1a1a1a; /* Mevcut dark-theme arka plan renginizle değiştirin */
+}
+
+/* Mevcut içeriklerin animasyonun üzerinde görünmesini sağlamak */
+.site-header,
+main {
+    position: relative; /* particles-js'in üzerinde görünmesi için gerekli */
+    z-index: 2; /* Arka plandan daha yüksek bir katman */
+    /* Gerekirse mevcut arka plan renklerini temizleyin veya yarı saydam yapın */
+    background: transparent !important; 
+}
+
+/* Dark theme sınıfı ayarı (eğer particles-js konteynerine renk verdiyseniz body'den kaldırın) */
+body.dark-theme {
+    /* background-color: #1a1a1a; */ /* Bu satırı particles-js'e taşıdık, buradan kaldırın veya yorum satırı yapın */
+    color: white;
+}
 :root {
   --ink: #f0f4f1;
   --muted: #a0aec0;
